@@ -1,0 +1,36 @@
+#mainflex {
+    display: inline-flex;
+    flex-direction: row;
+}
+nav {
+    display: flex;
+    flex-direction: column;
+    border-style: solid;
+}
+nav a {
+    flex-grow: 1;
+}
+#subflex {
+    display: flex;
+    flex-direction: column;
+}
+header {
+    display: inline-flex;
+    flex-direction: row;
+    border-style: solid;
+    justify-content: space-evenly;
+}
+main {
+    border-style: solid;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#MLImgPlaceholder {
+    background-color: green;
+    width: 250px;
+    height: 250px;
+}
+footer {
+    border-style: solid;
+}
