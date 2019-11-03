@@ -1,0 +1,70 @@
+* { /*make all the boxes visible for development purposes */
+    border: 2px outset gray;
+    padding: 2px;
+}
+
+#mainflex { /*Everything except for the footer*/
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    justify-content: center;
+}
+nav { /*Buttons for the feature menu*/
+    display: flex;
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-direction: column;
+    width: 150px;
+}
+#subflex { /*Contains stats(header) and main window*/
+    display: flex;
+    flex-grow: 7;
+    flex-direction: column;
+}
+header { /*Contains stats: Science, Money, etc*/
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.tabcontents { /*Where most of the action happens*/
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.tabcontents.active { /*apply this class to the currently active tab*/
+    display: flex;
+}
+.bldgDetails {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+}
+.bldgDetails.active {
+    display: flex;
+}
+#researchImgPlaceholder { /*temporary placeholder until we get actual pictures*/
+    background-color: green;
+    width: 250px;
+    height: 250px;
+}
+.flexRow {
+    display: flex;
+    flex-direction: row;
+}
+footer { /*Contains external links and credits*/
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: flex-start;
+}
+footer a {
+    margin: 1px;
+}
+#moreInfo { 
+    width: 100%;
+    text-align: right;
+}
+.townButton {
+    width: 200px;
+}

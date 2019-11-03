@@ -3,33 +3,86 @@
 <head>
 <meta charset="UTF-8">
 <title>Space Program Idle</title>
-<link rel="stylesheet" href="main.css" type="text/css">
+<script src="script/ui.js" type="text/javascript"></script>
+<script src="script/game.js" type="text/javascript"></script>
+<link rel="stylesheet" href="style/flex.css" type="text/css">
+<link rel="stylesheet" href="style/theme_default.css" type="text/css">
 </head>
-<body>
+<body class="theme_default"> <!-- Change class with code to change theme. Theme-specific style rules will use body.theme_whatever in their selectors.-->
     <section id="mainflex">
-        <nav>
-            <a href="#">Mission Launch</a>
-            <a href="#">Science Production</a>
-            <a href="#">Research</a>
-            <a href="#">Town</a>
-            <a href="#">Mission Control</a>
-            <a href="#">Locked</a>
-            <a href="#">Locked</a>
-            <a href="#">Locked</a>
-            <a href="#">Locked</a>
-            <a href="#">Locked</a>
+        <nav> <!--Feature Menu-->
+            <button type="button" onclick="showTab('launch');">Mission Launch</button>
+            <button type="button" onclick="showTab('research');">Research</button>
+            <button type="button" onclick="showTab('town');">Town</button>
+            <button type="button" onclick="showTab('missionControl');">Mission Control</button>
         </nav>
         <section id="subflex">
-            <header>
+            <header> <!--Contains stats: Science, Money, etc.-->
                 <span>Science: 100</span>
                 <span>Money: 100</span>
             </header>
-            <main>
-                <div id="MLImgPlaceholder"></div>
-                <a href="#">Launch Mission</a>
+            <main id="tabContainer"> <!--Where most of the action happens-->
+                <div class="tabcontents active" id="launch">
+                    <div>
+                        <h3>Mission Stats</h3>
+                        Stats: ### <br />
+                        Stats: ### <br />
+                        Stats: ### <br />
+                        Stats: ### <br />
+                        Stats: ### <br />
+                        Stats: ### <br />
+                    </div>
+                    <button type="button">Launch!</button>
+                    <ul>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                    </ul>
+                </div>
+                <div class="tabcontents" id="research">
+                    <div class="flexRow">
+                        <button type="button">Prev</button>
+                        <div id="researchImgPlaceholder"></div>
+                        <button type="button"?>Next</button>
+                    </div>
+                    <button type="button">Research Tech</button>
+                    <div>Cost: 100 Science</div>
+                    <div>This is where some information on the research tech goes, this will usually be a decently sized paragraph. 
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <div id="moreInfo"><a href="#">Link to more information</a></div>
+                </div>
+                <div class="tabcontents" id="town">
+                    <button type="button" class="townButton" onclick="showBldg('apartmentDetails');">Apartment</button>
+                        <div class="bldgDetails" id="apartmentDetails">
+                            Building Details - Apartment
+                        </div>
+                    <button type="button" class="townButton" onclick="showBldg('constOfficeDetails');">Construction Office</button>
+                        <div class="bldgDetails" id="constOfficeDetails">
+                            Building Details - Construction Office
+                        </div>
+                    <button type="button" class="townButton" onclick="showBldg('officeDetails');">Office</button>
+                        <div class="bldgDetails" id="officeDetails">
+                            Building Details - Office Building
+                        </div>
+                    <button type="button" class="townButton" onclick="showBldg('mineDetails');">Mine</button>
+                        <div class="bldgDetails" id="mineDetails">
+                            Building Details - Mine
+                        </div>
+                </div>
+                <div class="tabcontents" id="missionControl">
+                    <button type="button">spam</button>
+                </div>
             </main>
         </section>
     </section>
-    <footer></footer>
+    <footer> <!--links and credits-->
+        <a href="#">Credits</a>
+        <a href="#">Discord</a>
+        <a href="#">Wiki</a>
+        <a href="#">Reddit</a>
+    </footer>
 </body>
 </html>
