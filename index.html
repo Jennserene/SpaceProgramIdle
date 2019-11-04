@@ -18,8 +18,8 @@
         </nav>
         <section id="subflex">
             <header> <!--Contains stats: Science, Money, etc.-->
-                <span>Science: 100</span>
-                <span>Money: 100</span>
+                <div>Science: <span id="scienceNum">100</span></div>
+                <div>Money: <span id="moneyNum">100</span></div>
             </header>
             <main id="tabContainer"> <!--Where most of the action happens-->
                 <div class="tabcontents active" id="launch">
@@ -31,7 +31,7 @@
                         Stats: ### <br />
                         Stats: ### <br />
                     </div>
-                    <button type="button">Launch!</button>
+                    <button type="button" onclick="incrementScience()">Launch!</button>
                     <ul>
                         <li>Generic mission text, stuff happens and stuff</li>
                         <li>Generic mission text, stuff happens and stuff</li>
