@@ -1,5 +1,5 @@
-# SpaceProgramIdle
+# Idlenauts - An Idle Space Program
 
-Space Program Idle is an idle-clicker game about managing a space exploration program.
+Idlenauts is an idle-clicker game about managing a space exploration program.
 
 Now with source control!
