@@ -10,15 +10,15 @@
 </head>
 <body class="theme_default"> <!-- Change class with code to change theme. Theme-specific style rules will use body.theme_whatever in their selectors.-->
     <section id="mainflex">
-        <nav> <!--Feature Menu-->
-            <button type="button" onclick="showTab('launch');">Mission Launch</button>
-            <button type="button" onclick="showTab('research');">Research</button>
-            <button type="button" onclick="showTab('town');">Town</button>
-            <button type="button" onclick="showTab('missionControl');">Mission Control</button>
+        <nav> <!--Feature Menu--> <!-- onclick="showTab('research');"-->
+            <button type="button" onclick="showTab('launch');" id="launchMenuButton">Mission Launch</button>
+            <button type="button" id="researchMenuButton">Research</button>
+            <button type="button" onclick="showTab('town');" id="townMenuButton">Town</button>
+            <button type="button" onclick="showTab('missionControl');" id="missionControlMenuButton">Mission Control</button>
         </nav>
         <section id="subflex">
             <header> <!--Contains stats: Science, Money, etc.-->
-                <div>Science: <span id="scienceNum">100</span></div>
+                <div>Science: <span id="scienceNum"></span></div>
                 <div>Money: <span id="moneyNum">100</span></div>
             </header>
             <main id="tabContainer"> <!--Where most of the action happens-->
@@ -31,7 +31,7 @@
                         Stats: ### <br />
                         Stats: ### <br />
                     </div>
-                    <button type="button" onclick="incrementScience()">Launch!</button>
+                    <button type="button" onclick="incrementScience();">Launch!</button>
                     <ul>
                         <li>Generic mission text, stuff happens and stuff</li>
                         <li>Generic mission text, stuff happens and stuff</li>
