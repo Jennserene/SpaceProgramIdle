@@ -1,8 +1,7 @@
-document.getElementById("researchMenuButton").addEventListener("click", test);
-function test() 
-{
-    alert("Research!");
-}
+document.getElementById("launchMenuButton").addEventListener("click", function(){ showTab('launch'); });
+document.getElementById("researchMenuButton").addEventListener("click", function(){ showTab('research'); });
+document.getElementById("townMenuButton").addEventListener("click", function(){ showTab('town'); });
+document.getElementById("missionControlMenuButton").addEventListener("click", function(){ showTab('missionControl'); });
 function showTab(tabid)
 {
     // get main element so that it's children can be accessed
