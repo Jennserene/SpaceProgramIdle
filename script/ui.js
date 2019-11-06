@@ -1,7 +1,7 @@
 document.getElementById("researchMenuButton").addEventListener("click", test);
 function test() 
 {
-    window.alert("Research!");
+    alert("Research!");
 }
 function showTab(tabid)
 {
