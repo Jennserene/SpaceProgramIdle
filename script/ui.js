@@ -21,6 +21,10 @@ function showTab(tabid)
         }
     }
 }
+document.getElementById("apartmentTownButton").addEventListener("click", function(){ showBldg('apartmentDetails'); });
+document.getElementById("constOfficeTownButton").addEventListener("click", function(){ showBldg('constOfficeDetails'); });
+document.getElementById("officeTownButton").addEventListener("click", function(){ showBldg('officeDetails'); });
+document.getElementById("mineTownButton").addEventListener("click", function(){ showBldg('mineDetails'); });
 function showBldg(bldgid)
 {
     // get div with details that the button specifies

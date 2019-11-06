@@ -10,6 +10,7 @@ function updateGameState() {
     let scienceNum = document.getElementById('scienceNum');
     scienceNum.innerHTML = gameState.science;
 }
+document.getElementById("launchButton").addEventListener("click", incrementScience);
 // On pressing Launch! button increment science by 1
 function incrementScience() {
     gameState.science++;

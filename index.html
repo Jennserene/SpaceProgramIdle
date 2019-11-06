@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Space Program Idle</title>
+<title>Idlenauts - An Idle Space Program</title>
 <link rel="stylesheet" href="style/flex.css" type="text/css">
 <!--<link rel="stylesheet" href="style/theme_default.css" type="text/css">-->
 </head>
@@ -29,7 +29,7 @@
                         Stats: ### <br />
                         Stats: ### <br />
                     </div>
-                    <button type="button" onclick="incrementScience();">Launch!</button>
+                    <button type="button" id="launchButton">Launch!</button>
                     <ul>
                         <li>Generic mission text, stuff happens and stuff</li>
                         <li>Generic mission text, stuff happens and stuff</li>
@@ -52,19 +52,19 @@
                     <div id="moreInfo"><a href="#">Link to more information</a></div>
                 </div>
                 <div class="tabcontents" id="town">
-                    <button type="button" class="townButton" onclick="showBldg('apartmentDetails');">Apartment</button>
+                    <button type="button" class="townButton" id="apartmentTownButton">Apartment</button>
                         <div class="bldgDetails" id="apartmentDetails">
                             Building Details - Apartment
                         </div>
-                    <button type="button" class="townButton" onclick="showBldg('constOfficeDetails');">Construction Office</button>
+                    <button type="button" class="townButton" id="constOfficeTownButton">Construction Office</button>
                         <div class="bldgDetails" id="constOfficeDetails">
                             Building Details - Construction Office
                         </div>
-                    <button type="button" class="townButton" onclick="showBldg('officeDetails');">Office</button>
+                    <button type="button" class="townButton" id="officeTownButton">Office</button>
                         <div class="bldgDetails" id="officeDetails">
                             Building Details - Office Building
                         </div>
-                    <button type="button" class="townButton" onclick="showBldg('mineDetails');">Mine</button>
+                    <button type="button" class="townButton" id="mineTownButton">Mine</button>
                         <div class="bldgDetails" id="mineDetails">
                             Building Details - Mine
                         </div>
