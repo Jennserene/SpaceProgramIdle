@@ -2,8 +2,16 @@
     border: 2px outset gray;
     padding: 2px;
 }
-
-#mainflex { /*Everything except for the footer*/
+img#logo{
+    display: block;
+    width: 400px;
+    height: 150px;
+    margin: auto;
+}
+h1 { /*there should be only one*/
+    text-align: center;
+}
+#mainflex { /*Everything except for the masthead and footer*/
     display: flex;
     flex-direction: row;
     width: 100%;
