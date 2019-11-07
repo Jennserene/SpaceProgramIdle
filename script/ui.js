@@ -1,7 +1,3 @@
-document.getElementById("launchMenuButton").addEventListener("click", showTab);
-document.getElementById("researchMenuButton").addEventListener("click", showTab);
-document.getElementById("townMenuButton").addEventListener("click", showTab);
-document.getElementById("missionControlMenuButton").addEventListener("click", showTab);
 function showTab(event)
 {
     // retrieve tabid using event object and DOM user data (get value of data-tab attribute in HTML)
@@ -23,10 +19,6 @@ function showTab(event)
         }
     }
 }
-document.getElementById("apartmentTownButton").addEventListener("click", showBldg);
-document.getElementById("constOfficeTownButton").addEventListener("click", showBldg);
-document.getElementById("officeTownButton").addEventListener("click", showBldg);
-document.getElementById("mineTownButton").addEventListener("click", showBldg);
 function showBldg(event)
 {
     // retrieve bldgid using event object and DOM user data (get value of data-bldg attribute in HTML)
@@ -41,4 +33,12 @@ function showBldg(event)
         // else, if the div's class doesn't contain active, add active class
         bldgContainer.classList.add('active');
     }
+}
+for (let i = 0, buttons = document.getElementsByTagName("NAV")[0].getElementsByTagName("BUTTON"); i < buttons.length; ++i)
+{
+	buttons[i].addEventListener("click", showTab);
+}
+for (let i = 0, buttons = document.getElementById("town").getElementsByTagName("BUTTON"); i < buttons.length; ++i)
+{
+	buttons[i].addEventListener("click", showBldg);
 }
