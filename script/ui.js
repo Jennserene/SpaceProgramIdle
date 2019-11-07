@@ -1,10 +1,8 @@
-document.getElementById("launchMenuButton").addEventListener("click", function(){ showTab('launch'); });
-document.getElementById("researchMenuButton").addEventListener("click", function(){ showTab('research'); });
-document.getElementById("townMenuButton").addEventListener("click", function(){ showTab('town'); });
-document.getElementById("missionControlMenuButton").addEventListener("click", function(){ showTab('missionControl'); });
-function showTab(tabid)
+function showTab(event)
 {
-    // get main element so that it's children can be accessed
+    // retrieve tabid using event object and DOM user data (get value of data-tab attribute in HTML)
+	let tabid = event.currentTarget.dataset.tab;
+	// get main element so that it's children can be accessed
     let tabContainer = document.getElementById('tabContainer');
     // put main element's children in an array
     let tabs = tabContainer.children;
@@ -21,12 +19,10 @@ function showTab(tabid)
         }
     }
 }
-document.getElementById("apartmentTownButton").addEventListener("click", function(){ showBldg('apartmentDetails'); });
-document.getElementById("constOfficeTownButton").addEventListener("click", function(){ showBldg('constOfficeDetails'); });
-document.getElementById("officeTownButton").addEventListener("click", function(){ showBldg('officeDetails'); });
-document.getElementById("mineTownButton").addEventListener("click", function(){ showBldg('mineDetails'); });
-function showBldg(bldgid)
+function showBldg(event)
 {
+    // retrieve bldgid using event object and DOM user data (get value of data-bldg attribute in HTML)
+	let bldgid = event.currentTarget.dataset.bldg;
     // get div with details that the button specifies
     let bldgContainer = document.getElementById(bldgid)
     // if the div's class contains active then:
@@ -37,4 +33,12 @@ function showBldg(bldgid)
         // else, if the div's class doesn't contain active, add active class
         bldgContainer.classList.add('active');
     }
+}
+for (let i = 0, buttons = document.getElementsByTagName("NAV")[0].getElementsByTagName("BUTTON"); i < buttons.length; ++i)
+{
+	buttons[i].addEventListener("click", showTab);
+}
+for (let i = 0, buttons = document.getElementById("town").getElementsByTagName("BUTTON"); i < buttons.length; ++i)
+{
+	buttons[i].addEventListener("click", showBldg);
 }

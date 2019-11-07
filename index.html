@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
@@ -9,10 +9,10 @@
 <body class="theme_default"> <!-- Change class with code to change theme. Theme-specific style rules will use body.theme_whatever in their selectors.-->
     <section id="mainflex">
         <nav> <!--Feature Menu-->
-            <button type="button" class="menuButton" id="launchMenuButton">Mission Launch</button>
-            <button type="button" class="menuButton" id="researchMenuButton">Research</button>
-            <button type="button" class="menuButton" id="townMenuButton">Town</button>
-            <button type="button" class="menuButton" id="missionControlMenuButton">Mission Control</button>
+            <button type="button" id="launchMenuButton" data-tab="launch">Mission Launch</button>
+            <button type="button" id="researchMenuButton" data-tab="research">Research</button>
+            <button type="button" id="townMenuButton" data-tab="town">Town</button>
+            <button type="button" id="missionControlMenuButton" data-tab="missionControl">Mission Control</button>
         </nav>
         <section id="subflex">
             <header> <!--Contains stats: Science, Money, etc.-->
@@ -52,19 +52,19 @@
                     <div id="moreInfo"><a href="#">Link to more information</a></div>
                 </div>
                 <div class="tabcontents" id="town">
-                    <button type="button" class="townButton" id="apartmentTownButton">Apartment</button>
+                    <button type="button" class="townButton" id="apartmentTownButton" data-bldg="apartmentDetails">Apartment</button>
                         <div class="bldgDetails" id="apartmentDetails">
                             Building Details - Apartment
                         </div>
-                    <button type="button" class="townButton" id="constOfficeTownButton">Construction Office</button>
+                    <button type="button" class="townButton" id="constOfficeTownButton" data-bldg="constOfficeDetails">Construction Office</button>
                         <div class="bldgDetails" id="constOfficeDetails">
                             Building Details - Construction Office
                         </div>
-                    <button type="button" class="townButton" id="officeTownButton">Office</button>
+                    <button type="button" class="townButton" id="officeTownButton" data-bldg="officeDetails">Office</button>
                         <div class="bldgDetails" id="officeDetails">
                             Building Details - Office Building
                         </div>
-                    <button type="button" class="townButton" id="mineTownButton">Mine</button>
+                    <button type="button" class="townButton" id="mineTownButton" data-bldg="mineDetails">Mine</button>
                         <div class="bldgDetails" id="mineDetails">
                             Building Details - Mine
                         </div>
