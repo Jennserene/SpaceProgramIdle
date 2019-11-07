@@ -1,10 +1,12 @@
-document.getElementById("launchMenuButton").addEventListener("click", function(){ showTab('launch'); });
-document.getElementById("researchMenuButton").addEventListener("click", function(){ showTab('research'); });
-document.getElementById("townMenuButton").addEventListener("click", function(){ showTab('town'); });
-document.getElementById("missionControlMenuButton").addEventListener("click", function(){ showTab('missionControl'); });
-function showTab(tabid)
+document.getElementById("launchMenuButton").addEventListener("click", showTab);
+document.getElementById("researchMenuButton").addEventListener("click", showTab);
+document.getElementById("townMenuButton").addEventListener("click", showTab);
+document.getElementById("missionControlMenuButton").addEventListener("click", showTab);
+function showTab(event)
 {
-    // get main element so that it's children can be accessed
+    // retrieve tabid using event object and DOM user data (get value of data-tab attribute in HTML)
+	let tabid = event.currentTarget.dataset.tab;
+	// get main element so that it's children can be accessed
     let tabContainer = document.getElementById('tabContainer');
     // put main element's children in an array
     let tabs = tabContainer.children;
@@ -21,12 +23,14 @@ function showTab(tabid)
         }
     }
 }
-document.getElementById("apartmentTownButton").addEventListener("click", function(){ showBldg('apartmentDetails'); });
-document.getElementById("constOfficeTownButton").addEventListener("click", function(){ showBldg('constOfficeDetails'); });
-document.getElementById("officeTownButton").addEventListener("click", function(){ showBldg('officeDetails'); });
-document.getElementById("mineTownButton").addEventListener("click", function(){ showBldg('mineDetails'); });
-function showBldg(bldgid)
+document.getElementById("apartmentTownButton").addEventListener("click", showBldg);
+document.getElementById("constOfficeTownButton").addEventListener("click", showBldg);
+document.getElementById("officeTownButton").addEventListener("click", showBldg);
+document.getElementById("mineTownButton").addEventListener("click", showBldg);
+function showBldg(event)
 {
+    // retrieve bldgid using event object and DOM user data (get value of data-bldg attribute in HTML)
+	let bldgid = event.currentTarget.dataset.bldg;
     // get div with details that the button specifies
     let bldgContainer = document.getElementById(bldgid)
     // if the div's class contains active then:
