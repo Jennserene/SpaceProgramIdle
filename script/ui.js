@@ -42,3 +42,8 @@ for (let i = 0, buttons = document.getElementById("town").getElementsByTagName("
 {
 	buttons[i].addEventListener("click", showBldg);
 }
+function updateHeader(science, money)
+{
+    document.getElementById('scienceNum').textContent = science;
+    document.getElementById('moneyNum').textContent = money;
+}

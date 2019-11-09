@@ -30,8 +30,7 @@ function updateGameState() {
 		}
 	}
 	// update UI
-    document.getElementById('scienceNum').textContent = Math.floor(gameState.science / 1000);
-    document.getElementById('moneyNum').textContent = gameState.money;
+    updateHeader(Math.floor(gameState.science / 1000).toString(), gameState.money.toString());
 }
 document.getElementById("launchButton").addEventListener("click", launchMission);
 // On pressing Launch! button increment science by 1
