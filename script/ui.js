@@ -34,6 +34,34 @@ function showBldg(event)
         bldgContainer.classList.add('active');
     }
 }
+function updateHeader(science, money)
+{
+    document.getElementById('scienceNum').textContent = science;
+    document.getElementById('moneyNum').textContent = money;
+}
+function updateLaunchTab(readyMission)
+{
+    let statsDiv = document.getElementById('readyMissionStats');
+    while (statsDiv.firstChild)
+    {
+        statsDiv.removeChild(statsDiv.firstChild);
+    }
+    let missionHeader = document.createElement('h2');
+    missionHeader.append('Mission: ' + readyMission.missionName);
+    let statsHeader = document.createElement('h3');
+    statsHeader.append('Mission Stats');
+    statsDiv.append(
+        missionHeader,
+        statsHeader,
+        'Launch cost: ' + readyMission.costToLaunchMoney.toString(),
+        document.createElement('br'),
+        'Science rate: ' + readyMission.sciencePerSec.toString() + '/s',
+        document.createElement('br'),
+        'Duration: ' + (readyMission.missionDuration / 1000).toString() + 's',
+        document.createElement('br'),
+        'Science on completion: ' +  + readyMission.scienceOnCompletion.toString()
+        );
+}
 for (let i = 0, buttons = document.getElementsByTagName("NAV")[0].getElementsByTagName("BUTTON"); i < buttons.length; ++i)
 {
 	buttons[i].addEventListener("click", showTab);
@@ -42,8 +70,4 @@ for (let i = 0, buttons = document.getElementById("town").getElementsByTagName("
 {
 	buttons[i].addEventListener("click", showBldg);
 }
-function updateHeader(science, money)
-{
-    document.getElementById('scienceNum').textContent = science;
-    document.getElementById('moneyNum').textContent = money;
-}
+document.getElementById("launchButton").addEventListener("click", launchMission);

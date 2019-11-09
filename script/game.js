@@ -32,8 +32,6 @@ function updateGameState() {
 	// update UI
     updateHeader(Math.floor(gameState.science / 1000).toString(), gameState.money.toString());
 }
-document.getElementById("launchButton").addEventListener("click", launchMission);
-// On pressing Launch! button increment science by 1
 function getMissionByID(missionID) {
 	// given a MissionID, return all the gamedata for that mission
 	// to do this, we need a function that returns true given a full mission
@@ -62,4 +60,19 @@ function launchMission() {
 	// set up ongoing effects to be handled by updateGameState
 	gameState.missions.push(newMission);
 	// TODO: call a function to update the UI to show missions in progress
+}
+function loadMissions(e)
+{
+	// this refers to the XMLHttpRequest object
+	gameData.missions = this.response;
+	updateLaunchTab(gameData.missions[0]); // TODO: select the appropriate mission to display
+}
+// INITIALIZATION STUFF
+// load mission data
+{
+	let req = new XMLHttpRequest();
+	req.open('GET', 'data/mission.json');
+	req.responseType = 'json';
+	req.addEventListener('load', loadMissions)
+	req.send();
 }
