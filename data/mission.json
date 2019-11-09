@@ -5,8 +5,8 @@
     "missionDuration": 5000,
     "sciencePerSec": 1,
     "scienceOnCompletion": 0,
-    "requirements": [],
     "costToLaunchMoney": 0,
+    "requirements": [],
     "repeatable": true,
     "missionText1": "You throw a paper airplane into the air and watch it glide for a few seconds"
 },
