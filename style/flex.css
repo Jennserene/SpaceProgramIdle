@@ -3,13 +3,7 @@
     padding: 2px;
 }
 img#logo{
-    display: block;
-    width: 400px;
-    height: 150px;
-    margin: auto;
-}
-h1 { /*there should be only one*/
-    text-align: center;
+    width: 150px;
 }
 #mainflex { /*Everything except for the masthead and footer*/
     display: flex;
