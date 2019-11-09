@@ -1,0 +1,30 @@
+[
+{
+    "missionID": 0,
+    "missionName": "Paper Airplane",
+    "missionDuration": 5000,
+    "sciencePerSec": 1,
+    "scienceOnCompletion": 0,
+    "requirements": [],
+    "costToLaunchMoney": 0,
+    "repeatable": true,
+    "missionText1": "You throw a paper airplane into the air and watch it glide for a few seconds"
+},
+{
+    "missionID": 1,
+    "missionName": "Bottle Rocket",
+    "missionDuration": 3000,
+    "sciencePerSec": 2,
+    "scienceOnCompletion": 0,
+    "costToLaunchMoney": 0,
+    "requirements": [
+        {
+            "reqType": "researchUnlocked",
+            "researchID": 1
+        }
+    ],
+    "repeatable": false,
+    "missionText1": "You take a 2 liter soda bottle and fill it with water.",
+    "missionText2": "You set the bottle upside down and the water dribbles out, but not much else happens. Oh well."
+}
+]

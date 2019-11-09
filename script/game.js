@@ -1,18 +1,19 @@
-// Declare gameState object, this object contains all the main stats
+const msPerTick = 50;
+// Declare and initialize gameState object, this object contains all the main stats
 var gameState = {
     science: 0,
     money: 0,
 	missions: [],
 };
 // Run updateGameState 20 times a second
-var inst = setInterval(updateGameState, 50);
+var inst = setInterval(updateGameState, msPerTick);
 // Every time this runs update the DOM to the current gameState
 function updateGameState() {
 	// apply effect of missions in progress
 	for (let i = 0; i < gameState.missions.length; ++i)
 	{
-		gameState.science += gameState.missions[i].scienceRate;
-		gameState.missions[i].duration--;
+		gameState.science += gameState.missions[i].scienceRate * msPerTick;
+		gameState.missions[i].duration -= msPerTick;
 		if (gameState.missions[i].duration <= 0)
 		{	// mission over
 			// remove mission from gameState missions list
@@ -22,7 +23,7 @@ function updateGameState() {
 		}
 	}
 	// update UI
-    document.getElementById('scienceNum').textContent = gameState.science;
+    document.getElementById('scienceNum').textContent = Math.floor(gameState.science / 1000);
     document.getElementById('moneyNum').textContent = gameState.money;
 }
 document.getElementById("launchButton").addEventListener("click", launchMission);
@@ -34,8 +35,8 @@ function launchMission() {
 	// TODO: get mission info from somewhere, instead of these hardcoded values
 	let newMission = {
 		launchCost: 1,
-		scienceRate: 5, // science per time tick
-		duration: 100, // count of time ticks
+		scienceRate: 1, // science per sec
+		duration: 5000, // ms
 	}
 	// TODO: check if we have enough money
 	// apply immediate effects (launch cost)

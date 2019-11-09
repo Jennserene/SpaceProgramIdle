@@ -1,0 +1,9 @@
+{
+    "researchID": 1,
+    "researchName": "Bottle Rocket",
+    "researchImg": "data/img/bottleRocket.jpg",
+    "costScience": 5,
+    "requirements": [],
+    "descText": "This is where some information on the research tech goes, this will usually be a decently sized paragraph.",
+    "linkURL": "https://en.wikipedia.org/wiki/Water_rocket"
+}
