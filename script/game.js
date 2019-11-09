@@ -1,10 +1,17 @@
 const msPerTick = 50;
 // Declare and initialize gameState object, this object contains all the main stats
 var gameState = {
-    science: 0,
+    science: 0, // actually millisciences
     money: 0,
-	missions: [],
+	missions: [], // missions in progress
+	nextMission: 0, // ID of next mission in progression
+	researchUnlocked: [],
 };
+// Declare and initialize gameData object
+var gameData = {
+	missions: [],
+	research: [],
+}
 // Run updateGameState 20 times a second
 var inst = setInterval(updateGameState, msPerTick);
 // Every time this runs update the DOM to the current gameState
@@ -28,6 +35,18 @@ function updateGameState() {
 }
 document.getElementById("launchButton").addEventListener("click", launchMission);
 // On pressing Launch! button increment science by 1
+function getMissionByID(missionID) {
+	// given a MissionID, return all the gamedata for that mission
+	// to do this, we need a function that returns true given a full mission
+	//   object that has the ID we're looking for. function.bind creates
+	//   that function for us.
+	return gameData.missions.find(matchMissionID.bind(missionID)); // voodoo
+}
+function matchMissionID(element) {
+	// within the scope of a function created by matchMissionID.bind,
+	//   this refers to the parameter passed to .bind()
+	return (element.missionID == this); // spooky voodoo
+}
 function incrementScience() {
     gameState.science++;
 }
