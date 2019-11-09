@@ -4,6 +4,7 @@
     "researchImg": "data/img/bottleRocket.jpg",
     "costScience": 5,
     "requirements": [],
+    "unlocks": [],
     "descText": "This is where some information on the research tech goes, this will usually be a decently sized paragraph.",
     "linkURL": "https://en.wikipedia.org/wiki/Water_rocket"
 }
