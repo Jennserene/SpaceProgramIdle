@@ -21,20 +21,7 @@
                 <div>Money: <span id="moneyNum"></span></div>
             </header>
             <main id="tabContainer"> <!--Where most of the action happens-->
-                <div class="tabcontents active" id="launch">
-                    <div id="readyMissionStats">
-                        <h3>Mission Stats</h3>
-                        Launch cost: xx<br />
-                        Science rate: xx<br />
-                        Duration: xx<br />
-                    </div>
-                    <button type="button" id="launchButton">Launch!</button>
-                    <ul>
-                        <li>Generic mission text, stuff happens and stuff</li>
-                        <li>Generic mission text, stuff happens and stuff</li>
-                        <li>Generic mission text, stuff happens and stuff</li>
-                    </ul>
-                </div>
+                
                 <div class="tabcontents" id="research">
                     <div class="flexRow">
                         <button type="button">Prev</button>
@@ -51,6 +38,14 @@
                     <div id="moreInfo"><a href="#">Link to more information</a></div>
                 </div>
                 <div class="tabcontents" id="town">
+                    <button type="button" class="townButton" id="gatherTownButton" data-bldg="gatherDetails">Gather Food</button>
+                        <div class="bldgDetails" id="gatherDetails">
+                            Building Details - Gather Food
+                        </div>
+                    <button type="button" class="townButton" id="farmTownButton" data-bldg="farmDetails">Farm</button>
+                        <div class="bldgDetails" id="farmDetails">
+                            Building Details - Farm
+                        </div>
                     <button type="button" class="townButton" id="constOfficeTownButton" data-bldg="constOfficeDetails">Construction Office</button>
                         <div class="bldgDetails" id="constOfficeDetails">
                             Building Details - Construction Office
@@ -70,6 +65,20 @@
                 </div>
                 <div class="tabcontents" id="missionControl">
                     <button type="button">spam</button>
+                </div>
+                <div class="tabcontents active" id="launch">
+                    <div id="readyMissionStats">
+                            <h3>Mission Stats</h3>
+                            Launch cost: xx<br />
+                            Science rate: xx<br />
+                            Duration: xx<br />
+                    </div>
+                    <button type="button" id="launchButton">Launch!</button>
+                    <ul>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                        <li>Generic mission text, stuff happens and stuff</li>
+                    </ul>
                 </div>
             </main>
         </section>
