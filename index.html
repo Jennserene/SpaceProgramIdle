@@ -10,10 +10,10 @@
     <section id="mainflex">
         <nav> <!--Feature Menu-->
             <img src="gfx/logo.svg" id="logo" alt="Idlenauts logo"/>
-            <button type="button" class="menuButton" id="launchMenuButton" data-tab="launch">Mission Launch</button>
-            <button type="button" class="menuButton" id="researchMenuButton" data-tab="research">Research</button>
             <button type="button" class="menuButton" id="townMenuButton" data-tab="town">Town</button>
+            <button type="button" class="menuButton" id="researchMenuButton" data-tab="research">Research</button>
             <button type="button" class="menuButton" id="missionControlMenuButton" data-tab="missionControl">Mission Control</button>
+            <button type="button" class="menuButton" id="launchMenuButton" data-tab="launch">Mission Launch</button>
         </nav>
         <section id="subflex">
             <header> <!--Contains stats: Science, Money, etc.-->
@@ -22,21 +22,7 @@
             </header>
             <main id="tabContainer"> <!--Where most of the action happens-->
                 
-                <div class="tabcontents" id="research">
-                    <div class="flexRow">
-                        <button type="button">Prev</button>
-                        <div id="researchImgPlaceholder"></div>
-                        <button type="button"?>Next</button>
-                    </div>
-                    <button type="button">Research Tech</button>
-                    <div>Cost: 100 Science</div>
-                    <div>This is where some information on the research tech goes, this will usually be a decently sized paragraph. 
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
-                        magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
-                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
-                        Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
-                    <div id="moreInfo"><a href="#">Link to more information</a></div>
-                </div>
+                
                 <div class="tabcontents" id="town">
                     <!--<button type="button" class="townButton" id="BLANKTownButton" data-bldg="BLANKDetails">BLANK</button>
                         <div class="bldgDetails" id="BLANKDetails">
@@ -126,6 +112,21 @@
                         <div class="bldgDetails" id="smelterDetails">
                             Building Details - Smelter
                         </div>
+                </div>
+                <div class="tabcontents" id="research">
+                    <div class="flexRow">
+                        <button type="button">Prev</button>
+                        <div id="researchImgPlaceholder"></div>
+                        <button type="button"?>Next</button>
+                    </div>
+                    <button type="button">Research Tech</button>
+                    <div>Cost: 100 Science</div>
+                    <div>This is where some information on the research tech goes, this will usually be a decently sized paragraph. 
+                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore 
+                            magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo 
+                            consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. 
+                            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</div>
+                    <div id="moreInfo"><a href="#">Link to more information</a></div>
                 </div>
                 <div class="tabcontents" id="missionControl">
                     <button type="button">spam</button>
