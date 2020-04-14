@@ -21,8 +21,6 @@
                 <div>Money: <span id="moneyNum"></span></div>
             </header>
             <main id="tabContainer"> <!--Where most of the action happens-->
-                
-                
                 <div class="tabcontents" id="town">
                     <!--<button type="button" class="townButton" id="BLANKTownButton" data-bldg="BLANKDetails">BLANK</button>
                         <div class="bldgDetails" id="BLANKDetails">
@@ -34,7 +32,55 @@
                         </div>
                     <button type="button" class="townButton" id="farmTownButton" data-bldg="farmDetails">Farm</button>
                         <div class="bldgDetails" id="farmDetails">
-                            Building Details - Farm
+                            <div style="width: 100%; display: table;">
+                                <div style="display: table-row;">
+                                    <div style="display: table-cell;">Farm</div>
+                                    <div style="display: table-cell;" align="right"><button type="button">View built structures</button></div>
+                                </div>
+                            </div>
+                            <div style="width: 100%; display: table;">  
+                                <div style="display: table-row;">
+                                        <div style="display: table-cell;">Plant some crops to grow various grains and vegetables</div>
+                                </div>
+                            </div>
+                            <hr>
+                                <div style="width: 100%; display: table;">Required to build:
+                                    <div style="display: table-row;">
+                                        <div style="display: table-cell;">Seeds</div>
+                                        <div style="display: table-cell;">100</div>
+                                    </div>
+                                    <div style="display: table-row;">
+                                        <div style="display: table-cell;">Time to build</div>
+                                        <div style="display: table-cell;">10 sec</div>
+                                    </div>
+                                </div>
+                            <hr>
+                                <div style="width: 100%; display: table;">Build with upgrades:
+                                    <div style="display: table-row;">
+                                        <div style="display: table-cell;">
+                                            <input type="checkbox" id="farmIrrigationBuildWith" name="farmIrrigationBuildWith" value="Irrigation">
+                                        </div>
+                                        <div style="display: table-cell;">
+                                            <label for="farmIrrigationBuildWith">Irrigation</label>
+                                        </div>
+                                        <div style="display: table-cell;">
+                                            <label for="farmIrrigationBuildWith">TtB x2</label>
+                                        </div>
+                                    </div>
+                                    <div style="display: table-row;">
+                                        <div style="display: table-cell;">
+                                            <input type="checkbox" id="farmSiloBuildWith" name="farmSiloBuildWith" value="silo">
+                                        </div>
+                                        <div style="display: table-cell;">
+                                            <label for="farmSiloBuildWith">Silo</label>
+                                        </div>
+                                        <div style="display: table-cell;">
+                                            <label for="farmSiloBuildWith">10 Steel</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            <hr>
+                                <button type="button">Build</button>
                         </div>
                     <button type="button" class="townButton" id="verticalFarmTownButton" data-bldg="verticalFarmDetails">Vertical Farm</button>
                         <div class="bldgDetails" id="verticalFarmDetails">
