@@ -70,3 +70,31 @@ footer a {
 .townButton {
     width: 200px;
 }
+.verticalHRContainer { /*HR Screen - Contains entire character information for single character*/
+    display: flex;
+    flex-direction: column;
+}
+.statsHRContainer { /*HR Screen - Contains stats: happiness, hunger, productivity, home location, and education*/
+    display: flex;
+    flex-direction: row;
+}
+.statsColumnHRContainer { /*HR Screen - Contains a single column of stats*/
+    display: flex;
+    flex-direction: column;
+}
+.singleStatHRContainer { /*HR Screen - Contains a single stat*/
+    display: flex;
+    flex-direction: column;
+}
+.jobSkillsHRContainer { /*HR Screen - Contains all the job skills*/
+    display: flex;
+    flex-direction: row;
+}
+.jobSkillsColumnHRContainer { /*HR Screen - contains a single column of job skills*/
+    display: flex;
+    flex-direction: column;
+}
+.singleJobSkillHRContainer { /*HR Screen - contains a single job skill*/
+    display: flex;
+    flex-direction: row;
+}
