@@ -77,6 +77,7 @@ footer a {
 .statsHRContainer { /*HR Screen - Contains stats: happiness, hunger, productivity, home location, and education*/
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .statsColumnHRContainer { /*HR Screen - Contains a single column of stats*/
     display: flex;
@@ -89,6 +90,7 @@ footer a {
 .jobSkillsHRContainer { /*HR Screen - Contains all the job skills*/
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
 }
 .jobSkillsColumnHRContainer { /*HR Screen - contains a single column of job skills*/
     display: flex;
@@ -97,4 +99,13 @@ footer a {
 .singleJobSkillHRContainer { /*HR Screen - contains a single job skill*/
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
+}
+.nameHRContainer { /*HR Screen - character name*/
+    display: flex;
+    justify-content: center;
+}
+.jobSkillsHRTitlePlate { /*HR Screen - Job Skills title plate*/
+    display: flex;
+    justify-content: center;
 }
